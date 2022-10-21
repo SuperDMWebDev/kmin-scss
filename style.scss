@@ -1,0 +1,56 @@
+@use "sass:math";
+
+@use "base" as *;
+@use "function" as *;
+@use "share" as *;
+
+body {
+  font: 100% $font-stack;
+  color: $primary-color;
+}
+nav {
+  ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+  li {
+    display: inline-block;
+  }
+  a {
+    display: block;
+    padding: 6px 12px;
+    text-decoration: none;
+  }
+}
+// button {
+//   @include rounded;
+//   @include theme($theme: DarkRed);
+// }
+@include small-screen {
+  button {
+    width: 500px;
+  }
+}
+
+.message-success {
+  @extend %message;
+  border-color: green;
+}
+.message-fail {
+  @extend %message;
+  border-color: red;
+}
+article[role="main"] {
+  width: math.div(600, 900) * 100%;
+}
+article {
+  font-size: rem(50);
+}
+
+.menu {
+  display: none;
+  @media screen and (max-width: 992px) {
+    display: block;
+  }
+}

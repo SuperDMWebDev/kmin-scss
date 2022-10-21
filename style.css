@@ -1,0 +1,56 @@
+.message-success, .message-fail {
+  border: 1px solid #ccc;
+  padding: 10px;
+  color: #333;
+}
+
+body {
+  font: 100% Helvetica, sans-serif;
+  color: red;
+}
+
+nav ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+nav li {
+  display: inline-block;
+}
+nav a {
+  display: block;
+  padding: 6px 12px;
+  text-decoration: none;
+}
+
+@media screen and (min-width: 800px) {
+  button {
+    width: 500px;
+  }
+}
+.message-success {
+  border-color: green;
+}
+
+.message-fail {
+  border-color: red;
+}
+
+article[role=main] {
+  width: 66.6666666667%;
+}
+
+article {
+  font-size: 3.125rem;
+}
+
+.menu {
+  display: none;
+}
+@media screen and (max-width: 992px) {
+  .menu {
+    display: block;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */

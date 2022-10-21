@@ -1,0 +1,20 @@
+@use "sass:math";
+$radius: 3px;
+$width: 5px;
+@mixin rounded {
+  border-radius: $radius;
+  border-width: $width;
+}
+@mixin theme($theme: DarkGray) {
+  background: $theme;
+  box-shadow: 0 0 1px rgba($theme, 0.25);
+  color: #fff;
+}
+@mixin small-screen {
+  @media screen and (min-width: 800px) {
+    @content;
+  }
+}
+@function rem($pixels, $content: 16) {
+  @return (math.div($pixels, $content)) * 1rem;
+}

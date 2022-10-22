@@ -1,3 +1,7 @@
+.header:active {
+  background-color: yellow;
+}
+
 .message-success, .message-fail {
   border: 1px solid #ccc;
   padding: 10px;
@@ -5,7 +9,7 @@
 }
 
 body {
-  font: 100% Helvetica, sans-serif;
+  font: 100% Tahoma, sans-serif;
   color: red;
 }
 
@@ -15,12 +19,22 @@ nav ul {
   list-style: none;
 }
 nav li {
-  display: inline-block;
+  margin: 0;
+  padding: 0;
+  list-style: none;
 }
 nav a {
   display: block;
   padding: 6px 12px;
   text-decoration: none;
+}
+
+button {
+  border-radius: 3px;
+  border-width: 5px;
+  background: DarkRed;
+  box-shadow: 0 0 1px rgba(139, 0, 0, 0.25);
+  color: #fff;
 }
 
 @media screen and (min-width: 800px) {
@@ -41,7 +55,7 @@ article[role=main] {
 }
 
 article {
-  font-size: 3.125rem;
+  font-size: 1.875rem;
 }
 
 .menu {

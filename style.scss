@@ -1,12 +1,12 @@
 @use "sass:math";
 
-@use "base" as *;
-@use "function" as *;
+@use "base" as ba;
 @use "share" as *;
+@import "function";
 
 body {
   font: 100% $font-stack;
-  color: $primary-color;
+  color: ba.$primary-color;
 }
 nav {
   ul {
@@ -15,7 +15,9 @@ nav {
     list-style: none;
   }
   li {
-    display: inline-block;
+    margin: 0;
+    padding: 0;
+    list-style: none;
   }
   a {
     display: block;
@@ -23,10 +25,10 @@ nav {
     text-decoration: none;
   }
 }
-// button {
-//   @include rounded;
-//   @include theme($theme: DarkRed);
-// }
+button {
+  @include rounded;
+  @include theme($theme: DarkRed);
+}
 @include small-screen {
   button {
     width: 500px;
@@ -45,7 +47,7 @@ article[role="main"] {
   width: math.div(600, 900) * 100%;
 }
 article {
-  font-size: rem(50);
+  font-size: rem(15);
 }
 
 .menu {

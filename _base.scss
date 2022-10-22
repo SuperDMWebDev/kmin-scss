@@ -1,2 +1,7 @@
-$font-stack: Helvetica, sans-serif;
+$font-stack: Arial, Helvetica, sans-serif;
 $primary-color: red;
+.header {
+  &:active {
+    background-color: yellow;
+  }
+}
